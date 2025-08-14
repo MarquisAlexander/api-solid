@@ -3,7 +3,6 @@ import { CheckInsRepository } from "@/repositories/check-ins-repository";
 import { GymsRepository } from "@/repositories/gyms-repository";
 import { ResourseNotFoundError } from "./errors/resourse-not-found-error";
 import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
-import { error } from "console";
 import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 import { MaxDistanceError } from "./errors/max-distance-error";
 
@@ -43,7 +42,7 @@ export class CheckInUseCase {
       },
     );
 
-    const MAX_DISTANCE = 0.1;
+    const MAX_DISTANCE = 0.2;
 
     if (distance > MAX_DISTANCE) {
       throw new MaxDistanceError();

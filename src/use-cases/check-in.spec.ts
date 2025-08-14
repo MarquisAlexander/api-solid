@@ -21,8 +21,8 @@ describe("Check-in Use Case", () => {
       title: "academia js",
       description: "academia javascript",
       phone: "",
-      latitude: -5.8172408,
-      longitude: -35.2048643,
+      latitude: -5.518109,
+      longitude: -35.2574227,
     });
 
     vi.useFakeTimers();
@@ -36,8 +36,8 @@ describe("Check-in Use Case", () => {
     const { checkIn } = await sut.execute({
       gymId: "gym-01",
       userId: "user-01",
-      userLatitude: -22.9081088,
-      userLongitude: -43.1915008,
+      userLatitude: -5.517286,
+      userLongitude: -35.256714,
     });
 
     expect(checkIn.id).toEqual(expect.any(String));
@@ -49,16 +49,16 @@ describe("Check-in Use Case", () => {
     await sut.execute({
       gymId: "gym-01",
       userId: "user-01",
-      userLatitude: -22.9081088,
-      userLongitude: -43.1915008,
+      userLatitude: -5.517286,
+      userLongitude: -35.256714,
     });
 
     await expect(() =>
       sut.execute({
         gymId: "gym-01",
         userId: "user-01",
-        userLatitude: -22.9081088,
-        userLongitude: -43.1915008,
+        userLatitude: -5.517286,
+        userLongitude: -35.256714,
       }),
     ).rejects.toBeInstanceOf(MaxNumberOfCheckInsError);
   });
@@ -69,8 +69,8 @@ describe("Check-in Use Case", () => {
     await sut.execute({
       gymId: "gym-01",
       userId: "user-01",
-      userLatitude: -22.9081088,
-      userLongitude: -43.1915008,
+      userLatitude: -5.517286,
+      userLongitude: -35.256714,
     });
 
     vi.setSystemTime(new Date(2022, 0, 21, 8, 0, 0));
@@ -78,8 +78,8 @@ describe("Check-in Use Case", () => {
     const { checkIn } = await sut.execute({
       gymId: "gym-01",
       userId: "user-01",
-      userLatitude: -22.9081088,
-      userLongitude: -43.1915008,
+      userLatitude: -5.517286,
+      userLongitude: -35.256714,
     });
 
     expect(checkIn.id).toEqual(expect.any(String));
