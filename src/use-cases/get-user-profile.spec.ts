@@ -12,7 +12,7 @@ describe("Get Use Profile Use Case", () => {
     usersRepository = new InMemoryUsersRepository();
     sut = new GetUserProfileUseCase(usersRepository);
   });
-  it("shold be able to get user profile", async () => {
+  it("should be able to get user profile", async () => {
     const createdUser = await usersRepository.create({
       name: "Marquis Alexander",
       email: "test@test.com",
@@ -26,7 +26,7 @@ describe("Get Use Profile Use Case", () => {
     expect(user.name).toEqual("Marquis Alexander");
   });
 
-  it("shold not be able to get user profile with wrong id", async () => {
+  it("should not be able to get user profile with wrong id", async () => {
     await expect(() =>
       sut.execute({
         userId: "not-existing-id",

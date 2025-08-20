@@ -11,7 +11,7 @@ describe("Search Gyms Use Case", () => {
     sut = new SearchGymsUseCase(gymsRepository);
   });
 
-  it("shold be able to search for gyms", async () => {
+  it("should be able to search for gyms", async () => {
     await gymsRepository.create({
       title: "js gym",
       description: null,
@@ -36,7 +36,7 @@ describe("Search Gyms Use Case", () => {
     expect(gyms).toEqual([expect.objectContaining({ title: "js gym" })]);
   });
 
-  it("shold be able to fetch paginated gym search", async () => {
+  it("should be able to fetch paginated gym search", async () => {
     for (let i = 1; i <= 22; i++) {
       await gymsRepository.create({
         title: `js gym ${i}`,

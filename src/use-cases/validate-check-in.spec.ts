@@ -19,7 +19,7 @@ describe("Validate Check-in Use Case", () => {
     vi.useRealTimers();
   });
 
-  it("shold be able to validate check-in", async () => {
+  it("should be able to validate check-in", async () => {
     const createdCheckIn = await CheckInsRepository.create({
       gymId: "gym-01",
       user_id: "user-01",
@@ -33,7 +33,7 @@ describe("Validate Check-in Use Case", () => {
     expect(CheckInsRepository.items[0].validated_at).toEqual(expect.any(Date));
   });
 
-  it("shold not be able to validate inexistent check-in", async () => {
+  it("should not be able to validate inexistent check-in", async () => {
     await expect(() =>
       sut.execute({
         checkInId: "inexistent-check-in-id",
