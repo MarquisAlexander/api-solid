@@ -2,7 +2,7 @@ import { expect, describe, it, beforeEach } from "vitest";
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 import { hash } from "bcryptjs";
 import { GetUserProfileUseCase } from "./get-user-profile";
-import { ResourseNotFoundError } from "./errors/resourse-not-found-error";
+import { ResourceNotFoundError } from "./errors/resourse-not-found-error";
 
 let usersRepository: InMemoryUsersRepository;
 let sut: GetUserProfileUseCase;
@@ -31,6 +31,6 @@ describe("Get Use Profile Use Case", () => {
       sut.execute({
         userId: "not-existing-id",
       }),
-    ).rejects.toBeInstanceOf(ResourseNotFoundError);
+    ).rejects.toBeInstanceOf(ResourceNotFoundError);
   });
 });
