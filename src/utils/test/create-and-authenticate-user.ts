@@ -22,6 +22,5 @@ export async function createAndAuthenticateUser(
   });
 
   const { token } = authResponse.body;
-
   return { token };
 }
