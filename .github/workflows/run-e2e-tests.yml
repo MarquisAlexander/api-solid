@@ -3,19 +3,19 @@ name: Run E2E Tests
 on: [pull_request]
 
 jobs:
-  run-unit-tests:
+  run-e2e-tests:
     name: Run E2E Tests
     runs-on: ubuntu-latest
 
   services:
     postgres:
-      image: "bitnami/postgresql"
+      image: bitnami/postgresql
       ports:
         - 5432:5432
-      environment:
-        - POSTGRES_USERNAME=docker
-        - POSTGRES_PASSWORD=docker
-        - POSTGRES_DATABASE=apisolid
+      env:
+        POSTGRES_USERNAME: docker
+        POSTGRES_PASSWORD: docker
+        POSTGRES_DATABASE: apisolid
 
     steps:
       - uses: actions/checkout@v3
