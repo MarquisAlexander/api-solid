@@ -3,10 +3,11 @@
 </h2>
 
 <p align="center">
-  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-informações">Informações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-scripts-disponíveis">Scripts</a>
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#ℹ-informacoes">Informacoes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-rodar-o-projeto">Como rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-scripts-disponíveis">Scripts</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-exemplos-de-endpoints">Exemplos de Endpoints</a>
 </p>
 
 ---
@@ -27,7 +28,7 @@ Extras:
 
 ---
 
-## ℹ️ Informações
+## ℹ Informacoes
 
 O **api-solid** é uma API desenvolvida em **TypeScript** que segue os princípios do **SOLID** para garantir código limpo, escalável e de fácil manutenção.
 
@@ -46,7 +47,7 @@ Outros pontos de destaque:
 
 ---
 
-## ⚙️ Como rodar o projeto
+## ⚙ Como rodar o projeto
 
 1. **Clonar o repositório**
 
@@ -94,8 +95,6 @@ Abaixo alguns exemplos de requisições que podem ser feitas na API.
 > As rotas podem variar de acordo com a versão atual do projeto.
 
 ---
-
-### 👤 Usuários
 
 #### ➡️ Criar usuário
 
